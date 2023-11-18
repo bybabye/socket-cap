@@ -7,7 +7,7 @@ const server = http.createServer(app);
 const io = new SocketIo(server);
 
 // Mảng chứa thông tin về người dùng đang kết nối
-const activeUsers = [];
+let activeUsers = [];
 
 io.on('connection', (socket) => {
   console.log('Client connected');
